@@ -8,7 +8,7 @@
 
 > After installing all above packages make .env file same as .env-example with your Database credential.
 
-run program using following command
+>Run program using following command
 
 ```bash
  go run main.go
