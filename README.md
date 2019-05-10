@@ -1,4 +1,4 @@
-# golangpractice
+# GoLang
 
 > Before running this program install following packages using "go get"
 
