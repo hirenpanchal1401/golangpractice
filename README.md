@@ -1,12 +1,10 @@
 # GoLang
 
-> Before running this program install following packages using "go get"
+> Before running this program run following command to install necessary packages
 
-1. github.com/jinzhu/gorm
-1. github.com/joho/godotenv
-1. github.com/gorilla/mux
-1. github.com/go-sql-driver/mysql
-1. github.com/jinzhu/gorm/dialects/mysql
+```bash
+ go get .
+```
 
 > After installing all above packages make .env file same as .env-example with your Database credential.
 

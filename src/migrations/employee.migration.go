@@ -9,6 +9,7 @@ import (
 func Migrate() {
 	db := db.DbConn()
 	employee := models.Employee{}
-	db.AutoMigrate(&employee)
+	login := models.Login{}
+	db.AutoMigrate(&employee, &login)
 	// defer db.Close()
 }

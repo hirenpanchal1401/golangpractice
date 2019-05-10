@@ -16,7 +16,6 @@ func GetAllEmployee(res http.ResponseWriter, req *http.Request) {
 	employee := []models.Employee{}
 	employeeList := db.Find(&employee)
 	json.NewEncoder(res).Encode(employeeList.Value)
-	log.Println("List of Employee", employeeList.Value)
 	defer db.Close()
 }
 
@@ -49,7 +48,6 @@ func GetEmployee(res http.ResponseWriter, req *http.Request) {
 	}
 	employeeList := db.Where("name = ?", &emp.Name).Find(&employee)
 	json.NewEncoder(res).Encode(employeeList.Value)
-	log.Println("List of Employee", employeeList.Value)
 	defer db.Close()
 }
 
