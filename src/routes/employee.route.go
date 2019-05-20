@@ -16,6 +16,7 @@ func Route() *mux.Router {
 	router.Handle("/findbyname", Middleware(http.HandlerFunc(controller.GetEmployee), middleware.Auth)).Methods("GET")
 	router.Handle("/updatebyid/{id}", Middleware(http.HandlerFunc(controller.UpdateEmployee), middleware.Auth)).Methods("PUT")
 	router.Handle("/deletebyid/{id}", Middleware(http.HandlerFunc(controller.DeleteEmployee), middleware.Auth)).Methods("DELETE")
+	router.HandleFunc("/refresh", middleware.Refresh).Methods("GET")
 	return router
 }
 
